@@ -1,79 +1,104 @@
 // ============================================================
-//  SŌLO — Vocals Only Player
-//  All tracks are free, royalty-free vocal samples via CDN
+//  SŌLO — Islamic Audio Player
+//  Categories: Nasheeds · Quranic · Ambience
 // ============================================================
 
 const TRACKS = [
+  // ── NASHEEDS (Islamic vocal-only, no instruments) ─────────
   {
     id: 1,
-    title: "Angelic Choir Rise",
-    artist: "Sacred Voices Ensemble",
-    category: "choir",
+    title: "Tala' al Badru 'Alayna",
+    artist: "Madinah Voices",
+    category: "nasheed",
     duration: "1:12",
-    emoji: "🎶",
+    icon: "◐",
     src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
   },
   {
     id: 2,
-    title: "Solo Breath",
-    artist: "Aria Nova",
-    category: "solo",
+    title: "Ya Nabi Salam Alayka",
+    artist: "Dawud Mustafa",
+    category: "nasheed",
     duration: "1:05",
-    emoji: "🎤",
+    icon: "◐",
     src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
   },
   {
     id: 3,
-    title: "Moonlit Hum",
-    artist: "Luna Vox",
-    category: "acapella",
-    duration: "0:58",
-    emoji: "🌙",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+    title: "Allahu Allah",
+    artist: "Ibrahim Al Noor",
+    category: "nasheed",
+    duration: "1:18",
+    icon: "◐",
+    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
   },
+
+  // ── VOCALS (Acapella of decent songs, no instruments) ─────
   {
     id: 4,
-    title: "Cathedral Echo",
-    artist: "Grand Chorus",
-    category: "choir",
-    duration: "1:20",
-    emoji: "🎶",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+    title: "Somewhere Only We Know",
+    artist: "Acapella Studio",
+    category: "vocals",
+    duration: "1:10",
+    icon: "◉",
+    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"
   },
   {
     id: 5,
-    title: "Whisper Lane",
-    artist: "Elara Solis",
-    category: "solo",
-    duration: "1:10",
-    emoji: "🎤",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+    title: "Fix You",
+    artist: "Pure Voices",
+    category: "vocals",
+    duration: "1:22",
+    icon: "◉",
+    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3"
   },
+
+  // ── QURANIC RECITATIONS ───────────────────────────────────
   {
     id: 6,
-    title: "Bare Harmony",
-    artist: "The Acapella Collective",
-    category: "acapella",
-    duration: "1:03",
-    emoji: "🌙",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
+    title: "Surah Al-Fatiha",
+    artist: "Sheikh Abdul Basit",
+    category: "quran",
+    duration: "0:58",
+    icon: "◇",
+    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
   },
   {
     id: 7,
-    title: "Voice of Dawn",
-    artist: "Seraphine",
-    category: "solo",
-    duration: "0:55",
-    emoji: "🎤",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"
+    title: "Ayatul Kursi",
+    artist: "Sheikh Mishary Rashid",
+    category: "quran",
+    duration: "1:20",
+    icon: "◇",
+    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
   },
   {
     id: 8,
-    title: "Voices in the Mist",
-    artist: "Polyphonic Guild",
-    category: "choir",
+    title: "Surah Ar-Rahman",
+    artist: "Sheikh Saad Al-Ghamdi",
+    category: "quran",
     duration: "1:30",
-    emoji: "🎶",
+    icon: "◇",
+    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
+  },
+
+  // ── AMBIENCE (Daf, nature, halal sound effects) ───────────
+  {
+    id: 9,
+    title: "Morning Rain & Birds",
+    artist: "Nature Sounds",
+    category: "ambience",
+    duration: "2:00",
+    icon: "◌",
+    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"
+  },
+  {
+    id: 10,
+    title: "Daf Rhythm · Soft",
+    artist: "Sacred Percussion",
+    category: "ambience",
+    duration: "1:45",
+    icon: "◌",
     src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"
   }
 ];
@@ -139,8 +164,8 @@ function renderPlaylist() {
   if (tracks.length === 0) {
     playlistEl.innerHTML = `
       <div class="empty-state">
-        <span>🎤</span>
-        No vocals found — try a different search or category
+        <span>🕌</span>
+        No tracks found — try a different search or category
       </div>`;
     return;
   }
@@ -153,7 +178,7 @@ function renderPlaylist() {
     row.innerHTML = `
       <div class="track-name">
         <span class="play-indicator">${isActive && isPlaying ? "▶" : "♫"}</span>
-        ${track.emoji} ${track.title}
+        <span class="track-icon-sym">${track.icon}</span> ${track.title}
       </div>
       <div class="track-artist">${track.artist}</div>
       <div class="track-cat" data-cat="${track.category}">${capitalize(track.category)}</div>
@@ -259,13 +284,13 @@ function updateNowPlaying() {
   if (currentIndex === -1) {
     npTitle.textContent  = "Select a track";
     npArtist.textContent = "—";
-    npThumb.textContent  = "🎤";
+    npThumb.textContent  = "◉";
     return;
   }
   const t = TRACKS[currentIndex];
   npTitle.textContent  = t.title;
   npArtist.textContent = t.artist;
-  npThumb.textContent  = t.emoji;
+  npThumb.textContent  = t.icon;
 }
 
 // ============================================================
@@ -303,7 +328,7 @@ volumeSlider.addEventListener("input", () => {
   const vol = parseFloat(volumeSlider.value);
   audio.volume = vol;
   volPct.textContent = Math.round(vol * 100) + "%";
-  volIcon.textContent = vol === 0 ? "🔇" : vol < 0.5 ? "🔉" : "🔊";
+  volIcon.textContent = vol === 0 ? "×" : vol < 0.5 ? "◁" : "◀";
 });
 
 // Click volume icon to mute/unmute
@@ -314,12 +339,12 @@ volIcon.addEventListener("click", () => {
     audio.volume = 0;
     volumeSlider.value = 0;
     volPct.textContent = "0%";
-    volIcon.textContent = "🔇";
+    volIcon.textContent = "×";
   } else {
     audio.volume = lastVol;
     volumeSlider.value = lastVol;
     volPct.textContent = Math.round(lastVol * 100) + "%";
-    volIcon.textContent = "🔊";
+    volIcon.textContent = "◀";
   }
 });
 

@@ -132,6 +132,14 @@ html, body {
   font-weight: 400;
   transition: all 0.2s;
   letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cat-icon {
+  font-size: 13px;
+  opacity: 0.7;
+  font-style: normal;
 }
 .cat-btn:hover {
   background: var(--surface3);
@@ -310,10 +318,10 @@ html, body {
 .track-dur { font-size: 13px; color: var(--muted); }
 
 /* category badge colors */
-.track-cat[data-cat="solo"]    { background: rgba(192,132,252,0.15); color: #c084fc; }
-.track-cat[data-cat="choir"]   { background: rgba(129,140,248,0.15); color: #818cf8; }
-.track-cat[data-cat="acapela"], 
-.track-cat[data-cat="acapella"]{ background: rgba(244,114,182,0.15); color: #f472b6; }
+.track-cat[data-cat="nasheed"]  { background: rgba(192,132,252,0.15); color: #c084fc; }
+.track-cat[data-cat="vocals"]   { background: rgba(129,140,248,0.15); color: #818cf8; }
+.track-cat[data-cat="quran"]    { background: rgba(96,165,250,0.15);  color: #60a5fa; }
+.track-cat[data-cat="ambience"] { background: rgba(52,211,153,0.15);  color: #34d399; }
 
 /* Empty state */
 .empty-state {

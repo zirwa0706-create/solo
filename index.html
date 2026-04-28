@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SŌLO — Vocals Only</title>
+  <title>SŌLO</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
@@ -20,19 +20,29 @@
     <aside class="sidebar">
       <div class="logo">
         <div class="logo-text">SŌ<em>LO</em></div>
-        <div class="logo-sub">vocals only</div>
       </div>
 
       <div class="category-label">CATEGORIES</div>
       <div class="categories">
-        <button class="cat-btn active" data-cat="all">🎵 All Vocals</button>
-        <button class="cat-btn" data-cat="solo">🎤 Solo</button>
-        <button class="cat-btn" data-cat="choir">🎶 Choir</button>
-        <button class="cat-btn" data-cat="acapella">🌙 Acapella</button>
+        <button class="cat-btn active" data-cat="all">
+          <span class="cat-icon">◈</span> All
+        </button>
+        <button class="cat-btn" data-cat="nasheed">
+          <span class="cat-icon">◐</span> Nasheeds
+        </button>
+        <button class="cat-btn" data-cat="vocals">
+          <span class="cat-icon">◉</span> Vocals
+        </button>
+        <button class="cat-btn" data-cat="quran">
+          <span class="cat-icon">◇</span> Quranic
+        </button>
+        <button class="cat-btn" data-cat="ambience">
+          <span class="cat-icon">◌</span> Ambience
+        </button>
       </div>
 
       <div class="sidebar-footer">
-        <div class="stat"><span id="total-count">8</span> tracks loaded</div>
+        <div class="stat"><span id="total-count">10</span> tracks</div>
       </div>
     </aside>
 
@@ -41,10 +51,10 @@
 
       <!-- HEADER -->
       <div class="top-bar">
-        <div class="page-title">Now Streaming <em>— SŌLO</em></div>
+        <div class="page-title">Now Playing <em>— SŌLO</em></div>
         <div class="search-wrap">
           <span class="search-icon">⌕</span>
-          <input type="text" id="search" placeholder="Search vocals..." autocomplete="off"/>
+          <input type="text" id="search" placeholder="Search tracks..." autocomplete="off"/>
         </div>
       </div>
 
@@ -67,7 +77,7 @@
 
     <!-- NOW PLAYING INFO -->
     <div class="now-playing">
-      <div class="np-thumb" id="np-thumb">🎤</div>
+      <div class="np-thumb" id="np-thumb">◉</div>
       <div class="np-info">
         <div class="np-title" id="np-title">Select a track</div>
         <div class="np-artist" id="np-artist">—</div>
@@ -93,7 +103,7 @@
 
     <!-- VOLUME -->
     <div class="volume-wrap">
-      <span class="vol-icon" id="vol-icon">🔊</span>
+      <span class="vol-icon" id="vol-icon">▶</span>
       <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8"/>
       <span class="vol-pct" id="vol-pct">80%</span>
     </div>
