@@ -7,26 +7,26 @@ const TRACKS = [
   // ── NASHEEDS (Islamic vocal-only, no instruments) ─────────
   {
     id: 1,
-    title: "Tala' al Badru 'Alayna",
-    artist: "Madinah Voices",
+    title: "love and life",
+    artist: "Bara Masoud",
     category: "nasheed",
     duration: "1:12",
     icon: "◐",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+    src: "https://audiomack.com/ayinDEEN/song/nasheed-love-and-life-vocals-only-hb-w-hya-baraa-masoud-way2jannah"
   },
   {
     id: 2,
-    title: "Ya Nabi Salam Alayka",
-    artist: "Dawud Mustafa",
+    title: "The way of tears",
+    artist: "Muhammad al Mauqit",
     category: "nasheed",
     duration: "1:05",
     icon: "◐",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+    src: "https://thenaatsharif.com/muhammad-al-muqit/the-way-of-the-tears/"
   },
   {
     id: 3,
-    title: "Allahu Allah",
-    artist: "Ibrahim Al Noor",
+    title: "99 names of Allah",
+    artist: "Atif Aslam",
     category: "nasheed",
     duration: "1:18",
     icon: "◐",
@@ -41,45 +41,45 @@ const TRACKS = [
     category: "vocals",
     duration: "1:10",
     icon: "◉",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"
+    src: "https://www.soundhelix.com../examples/mp3/SoundHelix-Song-9.mp3"
   },
   {
     id: 5,
-    title: "Fix You",
-    artist: "Pure Voices",
+    title: "Set fire to the rain",
+    artist: "Adele",
     category: "vocals",
     duration: "1:22",
     icon: "◉",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3"
+    src: "https://www.soundhelix.com/examples/m..p3/SoundHelix-Song-10.mp3"
   },
 
   // ── QURANIC RECITATIONS ───────────────────────────────────
   {
     id: 6,
     title: "Surah Al-Fatiha",
-    artist: "Sheikh Abdul Basit",
+    artist: "Qari Mishary",
     category: "quran",
-    duration: "0:58",
+    duration: "0:52",
     icon: "◇",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+    src: "https://server8.mp3quran.net/afs/001.mp3"
   },
   {
     id: 7,
-    title: "Ayatul Kursi",
-    artist: "Sheikh Mishary Rashid",
+    title: "Surah Baqarah",
+    artist: "Qari Mishary",
     category: "quran",
-    duration: "1:20",
+    duration: "1:25:40",
     icon: "◇",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+    src: "https://server8.mp3quran.net/afs/002.mp3"
   },
   {
     id: 8,
     title: "Surah Ar-Rahman",
-    artist: "Sheikh Saad Al-Ghamdi",
+    artist: "Qari Mishary",
     category: "quran",
     duration: "1:30",
     icon: "◇",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
+    src: "https://server8.mp3quran.net/afs/055.mp3"
   },
 
   // ── AMBIENCE (Daf, nature, halal sound effects) ───────────
@@ -90,7 +90,7 @@ const TRACKS = [
     category: "ambience",
     duration: "2:00",
     icon: "◌",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"
+    src: "https://www.soundhelix.com/examples/mp3/Sound.....Helix-Song-7.mp3"
   },
   {
     id: 10,
@@ -99,7 +99,7 @@ const TRACKS = [
     category: "ambience",
     duration: "1:45",
     icon: "◌",
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"
+    src: "https://www.soundhelix.com/examples/mp...3/SoundHelix-Song-8.mp3"
   }
 ];
 
